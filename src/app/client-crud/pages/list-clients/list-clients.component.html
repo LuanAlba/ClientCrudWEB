@@ -1,0 +1,46 @@
+<div>
+    <p-toolbar>
+        <div>
+            <button pButton pRipple type="button" (click)="onClickAdd()" label="Add client"></button>
+        </div>
+    </p-toolbar>
+
+    <p-table>
+        <ng-template pTemplate="header">
+            <tr>
+                <th class="column-name">First name</th>
+                <th class="column-name">Last name</th>
+                <th class="column-name">Full name</th>
+                <th class="column-name">Phone number</th>
+                <th class="column-name">Birth date</th>
+                <th class="column-button-2"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-row>
+            <tr>
+                <td>
+                    {{ row.firstName }}
+                    {{ row.lastName }}
+                    {{ row.fullName }}
+                    {{ row.phoneNumber }}
+                    {{ row.birthDate }}
+                </td>
+                <td>
+                    <div>
+                        <div class="p-mr-2">
+                            <button pButton pRipple type="button" (click)="onClickUpdate(row)"
+                                    class="p-button-warning"></button>
+                        </div>
+                        <div>
+                            <button pButton pRipple type="button" (click)="onClickDelete(row)"
+                                    class="p-button-danger"></button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<app-client-delete-client></app-client-delete-client>
+

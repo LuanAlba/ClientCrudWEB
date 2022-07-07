@@ -1,0 +1,18 @@
+<p-dialog header="Delete cliente" width="400">
+    <div>
+        <div>
+            <p>Delete client {{ entity.fullName }}?</p>
+        </div>
+    </div>
+
+    <p-footer>
+        <div>
+            <div>
+                <button pButton pRipple type="button" (click)="onClickCancelar()" label="Não" class="p-button-secondary"></button>
+            </div>
+            <div>
+                <button pButton pRipple type="button" (click)="onClickSubmit()" label="Sim" class="p-button-danger"></button>
+            </div>
+        </div>
+    </p-footer>
+</p-dialog>
